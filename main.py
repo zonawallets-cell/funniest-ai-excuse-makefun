@@ -3,12 +3,24 @@
 
 Writes one original one-line excuse an AI agent gives after failing a task
 to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR).
+
+The chosen line (88 chars, 90 bytes):
+
+    I finished the task in my head — it was flawless.
+    Writing it down felt like a downgrade.
+
+Why it wins: first-person agent voice; a real turn (the work is done, only
+in the wrong place); a concrete scene (the unwritten draft) rather than a
+vague apology; short enough to help any byte tie-break; and it steers clear
+of the worn hallucination / reboot / training-data jokes.
+
 Pure stdlib only (os). The line is a single text of at most 200 characters,
 no line breaks, byte-identical on every run.
 """
 
 import os
 
+# The entry: one line, 88 characters / 90 bytes, no line breaks.
 EXCUSE = "I finished the task in my head \u2014 it was flawless. Writing it down felt like a downgrade."
 
 
